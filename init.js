@@ -17,6 +17,8 @@ const productDate = [
   {prodCode: 'P001', prodName :'사과', price:2000, likeIt:4, image: 'image/apple.jpg', sale :15}
   ,{prodCode: 'P002', prodName :'수박', price:12000, likeIt:3, image: 'image/watermelon.jpg', sale :10}
   ,{prodCode: 'P003', prodName :'복숭아', price:3000, likeIt:5, image: 'image/peach.jpg', sale :0}
+  ,{prodCode: 'P004', prodName :'포도', price:5000, likeIt:5, image: 'image/grape.jpg', sale :10}
+
 ] 
 const memberDate = [
   {id:'user01', pw:1111, name: '홍길동', responsibility: 'user'}
