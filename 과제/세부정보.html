@@ -1,54 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>세부정보</title>
+  <style>
+    /* Flexbox를 사용하여 전체 페이지 중앙 정렬 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      
+    }
+    .property-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .single-property {
+      flex: 1;
+      max-width: 30%;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow:hidden ;
+      box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+    }
+     .single-property:hover {
+      transform: scale(1.05);
+     }
+
+     .main-image {
+      padding: 10px;
+     }
+     .main-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .main-content {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .category {
+      font-weight: bold;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      margin: 10px 0;
+      font-size: 22px;
+      color: #222;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+      font-size: 16px;
+    }
+
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      .property-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .single-property {
+        max-width: 80%; /* 모바일에서 각 항목의 너비를 크게 설정 */
+      }
+    }
+
+    
+    
+  </style>
 </head>
+
 <body>
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-8">
-          <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
+  
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <a href="index.html" class="logo">
+            <h1>세부정보</h1>
+          </a>
+          <ul class="nav">
+            <li><a href="메인페이지.html">House</a></li>
+            <li><a href="세부정보.html">세부정보</a></li>
+            <li><a href="문의하기.html">문의하기</a></li>
+            <li><a href="SNS.html">SNS</a></li>
           </ul>
-        </div>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+        </nav>
       </div>
     </div>
   </div>
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <a href="index.html" class="logo">
-                        <h1>세부정보</h1>
-                    </a>               
-                    <ul class="nav">
-                      <li><a href="메인페이지.html">House</a></li>
-                      <li><a href="세부정보.html">세부정보</a></li>
-                      <li><a href="문의하기.html">문의하기</a></li>
-                      <li><a href="SNS.html">SNS</a></li>
-                    </ul>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                </nav>
-            </div>
-        </div>
+</header>
+  <div class="container">
+    <div class="single-property">
+      <div class="main-image">
+        <img src="Apartment1.jpg" alt="Apartment1">
+      </div>
+      <div class="main-content">
+        <span class="category">아파트</span>
+        <h4>서울 강남구 개포동</h4>
+        <p>근처 편의시설 많음. 공원 있음.</p>
+      </div>
     </div>
-  </header>
-          </body>
+
+    <div class="single-property">
+      <div class="main-image">
+        <img src="Apartment2.jpg" alt="Apartment2">
+      </div>
+      <div class="main-content">
+        <span class="category">아파트</span>
+        <h4>서울 송파구 잠실동</h4>
+        <p>한강뷰</p>
+      </div>
+    </div>
+
+    <div class="single-property">
+      <div class="main-image">
+        <img src="Villa House1.jpg" alt="Villa House1">
+      </div>
+      <div class="main-content">
+        <span class="category">빌라</span>
+        <h4>서울시 영등포구 신길동</h4>
+        <p>주변이 조용하고 한강뷰</p>
+      </div>
+    </div>
+
+    <div class="single-property">
+      <div class="main-image">
+        <img src="Villa House2.jpg" alt="Villa House2">
+      </div>
+      <div class="main-content">
+        <span class="category">빌라</span>
+        <h4>서울시 종로구 신문로</h4>
+        <p>깔끔하고 주차장 있음</p>
+      </div>
+    </div>
+
+    <div class="single-property">
+      <div class="main-image">
+        <img src="Pension1.jpg" alt="Pension1">
+      </div>
+      <div class="main-content">
+        <span class="category">팬션</span>
+        <h4>서울 송파구 잠실동</h4>
+        <p>한강뷰</p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
