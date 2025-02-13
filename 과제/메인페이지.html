@@ -4,19 +4,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>문의하기</title>
+  <title>메인화면</title>
 </head>
+<style>
+   /* 헤더 이미지 설정 */
+   .page-heading {
+      position: relative;
+      background-image: url(Apartment1.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
 
+    /* 헤더에 반투명 효과 추가 */
+    .page-heading::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: 1;
+    }
+
+    /* 텍스트 중앙 배치 */
+    .page-heading .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: rgb(56, 40, 40);
+      padding-top: 100px;
+    } 
+    /* 네비게이션 메뉴 오른쪽 정렬 */
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-nav ul li {
+      display: inline-block;
+    }
+
+    /* 메뉴 항목 스타일링 */
+    .main-nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .logo h1 {
+      margin: 0;
+    }
+
+</style>
 <body>
-  <div class="page-heading header-text"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <span class="breadcrumb"><a href="#">Home</a>/ Properties</span>
-        <h3>Properties</h3>
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="과제.html" class="logo">
+              <h1>문의하기</h1>
+            </a>
+            <ul class="nav">
+              <li><a href="메인페이지.html">House</a></li>
+              <li><a href="세부정보.html">세부정보</a></li>
+              <li><a href="문의하기.html">문의하기</a></li>
+              <li><a href="SNS.html">SNS</a></li>
+            </ul>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
+
 
   <div class="section properties">
     <div class="container">
@@ -122,9 +194,7 @@
             <li>층수: <span>38th</span></li>
             <li>주차장: <span>2 cars</span></li>
           </ul>
-          <div class="main-button">
-            <a href="property-details.html">Schedule a visit</a>
-          </div>
+        
         </div>
       </div>
 <script>
