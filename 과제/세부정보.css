@@ -1,0 +1,130 @@
+/* Flexbox를 사용하여 전체 페이지 중앙 정렬 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.property-list {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px; /* 상단 여백 추가 */
+}
+
+.single-property {
+  flex: 1;
+  max-width: 30%; /* 3개씩 정렬될 수 있도록 각 항목의 최대 너비를 30%로 설정 */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.single-property:hover {
+  transform: scale(1.05);
+}
+
+.main-image {
+  padding: 10px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.main-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.category {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #222;
+}
+
+p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* 네비게이션 메뉴 오른쪽 정렬 */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+/* 메뉴 항목 스타일링 */
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+/* 헤더 이미지 설정 */
+.page-heading {
+  position: relative;
+  background-image: url(Apartment1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+/* 헤더에 반투명 효과 추가 */
+.page-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* 텍스트 중앙 배치 */
+.page-heading .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: rgb(56, 40, 40);
+  padding-top: 100px;
+}
+ 
